@@ -1,7 +1,7 @@
 import os
 from flask import Flask, redirect, url_for, request, render_template, jsonify
 from pymongo import MongoClient
-from json import loads, dump
+from json import loads, dumps
 from bson import json_util
 
 app = Flask(__name__)
