@@ -1,18 +1,12 @@
+version: '3'
 
+services:
   db:
-      image: mongo:latest
-      ports:
-        - 27017:27017
-  mongo-seed:
-      build: ./mongo-seed
-      links:
-        - db
-  web:
-    build: .
-    command: python -u app.py
-    ports:
-      - "80:80"
+    build: ./mongo
+    restart: always
     volumes:
-      - .:/todo
-    links:
-      - db
+      - ./mongo/data:/data/db #Helps to store MongoDB data in `./mongo/data`
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: userroot
+      MONGO_INITDB_DATABASE: prueba
