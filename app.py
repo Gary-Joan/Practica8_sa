@@ -8,8 +8,8 @@ app = Flask(__name__)
 client = MongoClient(
     os.environ['DB_PORT_27017_TCP_ADDR'],
     27017)
-db = client["pueba"]
-mycol= db["test"]
+db = client.prueba
+mycol= db.test
 
 @app.route('/')
 def home():

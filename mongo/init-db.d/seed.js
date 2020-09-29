@@ -12,5 +12,10 @@ db.test.insertMany([
     _id: 2,
     name: 'Flow',
     age: 10
+  },
+  {
+    _id: 3,
+    name: 'hola',
+    age: 15
   }
 ])
