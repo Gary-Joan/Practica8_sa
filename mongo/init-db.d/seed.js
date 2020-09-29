@@ -2,20 +2,8 @@
 // file names alphabetically ordered, if multiple files are to be run.
 
 db.test.drop();
-db.test.insertMany([
-  {
-    _id: 1,
-    name: 'Tensor',
-    age: 6
-  },
-  {
-    _id: 3,
-    name: 'Flow13',
-    age: 10
-  },
-  {
-    _id: 4,
-    name: 'hola',
-    age: 15
-  }
+db.test.insert_many([
+    {"type": "cat", "weight": 25, "color": "orange"},
+    {"type": "dog", "weight": 35, "color": "black"},
+    {"type": "cat", "weight": 10, "color": "black"}
 ])
