@@ -7,6 +7,4 @@ services:
     volumes:
       - ./mongo/data:/data/db #Helps to store MongoDB data in `./mongo/data`
     environment:
-      MONGO_INITDB_ROOT_USERNAME: user
-      MONGO_INITDB_ROOT_PASSWORD: userroot
       MONGO_INITDB_DATABASE: prueba
