@@ -14,11 +14,7 @@
         MONGO_INITDB_ROOT_PASSWORD: rootpassword
       ports:
         - 27017:27017
-  mongo_seed:
-      image: mongo:latest
+  mongo-seed:
+      build: ./mongo-seed
       links:
         - db
-      volumes:
-        - ./mongo-seed:/mongo-seed
-      command:
-        /mongo-seed/import.sh
