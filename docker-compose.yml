@@ -2,7 +2,7 @@
     build: ./mongo
     restart: always
     volumes:
-      - ./mongo/data:/data/db #Helps to store MongoDB data in `./mongo/data`
+      - ./mongo/data:/data/db 
     environment:
       MONGO_INITDB_DATABASE: prueba
   web:
