@@ -1,6 +1,9 @@
 import time
 import redis
 from flask import Flask
+import json
+import jsonpickle
+from json import JSONEncoder
 
 app = Flask(__name__)
 cache = redis.Redis(host='redis', port=6379)
@@ -46,6 +49,8 @@ def hello():
 
     print(cache.smembers(colorSet))
     count = get_hit_count()
-    return cache.smembers(colorSet)
+    sampleJson = jsonpickle.encode(sampleSet)
+    lista = dumps(sampleJson, default=str)
+    return lista
 if __name__ == '__main__':
     app.run("0.0.0.0",debug=True)
