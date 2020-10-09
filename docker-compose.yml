@@ -16,7 +16,9 @@ services:
             - "5000"
     redis:
         image: "redis:alpine"
-
+        command: redis-server --appendonly yes
+        volumes:
+            - ./data:/data
     static:
         image: nginx:latest
         volumes:
