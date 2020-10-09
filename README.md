@@ -14,4 +14,21 @@ Contenedores: conceptos, Docker, docker compose
 >>> http://localhost/items                                  //lista los items dentro de la base de datos
 
 ```
+Link video:
+[![Practica 8]](https://www.youtube.com/watch?v=Uu0SoscvHnk)
 
+# PRACTICA 9 SOFTWARE AVANZADO
+
+Contenedores: construcción compuesta de Docker compose
+
+# USO DE LA APLICACION
+```
+>>> git clone https://github.com/Gary-Joan/Practica8_sa.git  //clonar repositorio
+
+```
+>>> git clone https://github.com/Gary-Joan/Practica8_sa.git  //clonar repositorio
+>>> docker-compose up                                       //levantar el servicio
+```
+2. Ver aplicacion
+```
+>>> http://localhost/                                       //pagina de inicio del server

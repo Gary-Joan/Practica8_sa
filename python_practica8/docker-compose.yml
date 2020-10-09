@@ -1,0 +1,16 @@
+  db:
+    build: ./mongo
+    restart: always
+    volumes:
+      - ./mongo/data:/data/db 
+    environment:
+      MONGO_INITDB_DATABASE: prueba
+  web:
+    build: .
+    command: python -u app.py
+    ports:
+      - "80:80"
+    volumes:
+      - .:/todo
+    links:
+      - db
