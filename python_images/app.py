@@ -3,7 +3,7 @@ import redis
 from flask import Flask
 import json
 import jsonpickle
-from json import JSONEncoder
+from json import JSONEncoder, dumps, loads
 
 app = Flask(__name__)
 cache = redis.Redis(host='redis', port=6379)
