@@ -42,7 +42,7 @@ def get_hit_count():
             retries -= 1
             time.sleep(0.5)
 
-
+#ruta para poder ver los elementos guardados en el redis
 @app.route('/')
 def hello():
     print("Contents of the Redis set:")
