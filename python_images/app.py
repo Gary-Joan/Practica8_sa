@@ -49,7 +49,7 @@ def hello():
 
     print(cache.smembers(colorSet))
     count = get_hit_count()
-    sampleJson = jsonpickle.encode(sampleSet)
+    sampleJson = jsonpickle.encode(cache.smembers(colorSet))
     lista = dumps(sampleJson, default=str)
     return lista
 if __name__ == '__main__':
