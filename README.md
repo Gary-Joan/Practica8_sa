@@ -6,6 +6,7 @@ Contenedores: conceptos, Docker, docker compose
 1. Clonar repo:
 ```
 >>> git clone https://github.com/Gary-Joan/Practica8_sa.git  //clonar repositorio
+>>> cd python_practica8
 >>> docker-compose up                                       //levantar el servicio
 ```
 2. Ver aplicacion
